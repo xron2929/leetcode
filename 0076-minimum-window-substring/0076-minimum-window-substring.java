@@ -36,8 +36,6 @@ class Solution {
     public static String minWindow(String s, String t) {
         WindowDto windowDto = new WindowDto(-1,s.length()+1,s.length()+1);
         Map<Character,Integer>map = new HashMap();
-        if(s.equals(t)) return s;
-        System.out.println("s.length() = " + s.length());
         int left = 0;
         int cnt = t.length();
         for (int i = 0; i < t.length(); i++) {
@@ -45,15 +43,12 @@ class Solution {
         }
 
         for (int i = 0; i < s.length(); i++) {
-            
             if(map.containsKey(s.charAt(i))) {
                 Integer integer = map.get(s.charAt(i)) - 1;
-
                 if (integer >= 0) {
                     cnt--;
                 }
                 map.put(s.charAt(i), integer);
-                System.out.println();
             }
             if(cnt>0) continue;
             while(left<=i) {
