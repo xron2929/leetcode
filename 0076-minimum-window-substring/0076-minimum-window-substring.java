@@ -45,8 +45,7 @@ class Solution {
         }
 
         for (int i = 0; i < s.length(); i++) {
-            System.out.println("i = " + i);
-            System.out.println("s.charAt(i) = " + s.charAt(i));
+            
             if(map.containsKey(s.charAt(i))) {
                 Integer integer = map.get(s.charAt(i)) - 1;
 
