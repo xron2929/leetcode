@@ -37,6 +37,7 @@ class Solution {
         WindowDto windowDto = new WindowDto(-1,s.length()+1,s.length()+1);
         Map<Character,Integer>map = new HashMap();
         if(s.equals(t)) return s;
+        System.out.println("s.length() = " + s.length());
         int left = 0;
         int cnt = t.length();
         for (int i = 0; i < t.length(); i++) {
@@ -44,6 +45,8 @@ class Solution {
         }
 
         for (int i = 0; i < s.length(); i++) {
+            System.out.println("i = " + i);
+            System.out.println("s.charAt(i) = " + s.charAt(i));
             if(map.containsKey(s.charAt(i))) {
                 Integer integer = map.get(s.charAt(i)) - 1;
 
