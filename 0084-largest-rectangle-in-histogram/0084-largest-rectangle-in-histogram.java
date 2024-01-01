@@ -18,6 +18,9 @@ class Solution {
             stack.push(i);
         }
         return res;
+         // stack[i]는 i번째일 때의 최대 높이 
+         // 그래서 stack[i]랑 stack[i-1] 사이는 해당 높이의 최대갯수가 들어가있음 
+         // 그걸로 최대값을 가져옴
 
     }
 }
